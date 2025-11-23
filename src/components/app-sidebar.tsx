@@ -22,7 +22,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "./ui/sidebar";
-import { useHasActiveSubscription } from "@/app/features/subscriptions/hooks/use-subscriptions";
+// import { useHasActiveSubscription } from "@/features/subscriptions/hooks/use-subscriptions";
+// import { useHasActiveSubscription } from "@/app/features/subscriptions/hooks/use-subscriptions";
+import { useHasActiveSubscription } from "@/features/subscriptions/hooks/use-subscriptions";
 
 const menuItem = [
   {
