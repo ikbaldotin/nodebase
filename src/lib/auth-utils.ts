@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { auth } from "./auth";
 export const requireAuth = async () => {
   const session = await auth.api.getSession({
-    headers: await headers(),
+    headers: headers() as any,
   });
   if (!session) {
     redirect("/login");
@@ -12,7 +12,7 @@ export const requireAuth = async () => {
 };
 export const requireUnauth = async () => {
   const session = await auth.api.getSession({
-    headers: await headers(),
+    headers: headers() as any,
   });
   if (session) {
     redirect("/workflows");
